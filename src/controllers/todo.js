@@ -38,7 +38,7 @@ exports.getTodo = async (req, res) => {
 
 exports.addTodo = async (req, res) => {
   try {
-    const data = await todo.create(req.body);
+    const data = await todo.create({ ...req.body, isDone: false });
 
     res.status(200).send({
       status: "success",

@@ -8,8 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      task: {
+      title: {
         type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      isDone: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
